@@ -365,9 +365,10 @@ export class D1Storage implements IStorage {
       const result = await this.getDb()
         .prepare('SELECT workflow_id FROM workflow_favorites WHERE user_id = ?')
         .bind(userId)
-        .all<{ workflow_id: string }>();
+        .all<{ workflow_id: number }>();
       
-      return (result.results || []).map(r => r.workflow_id);
+      // workflow_id 在数据库中是 INTEGER 类型，需要转换为字符串
+      return (result.results || []).map(r => String(r.workflow_id));
     } catch (error) {
       console.error('Failed to get workflow favorites:', error);
       return [];
@@ -379,9 +380,10 @@ export class D1Storage implements IStorage {
    */
   async addWorkflowFavorite(userId: number, workflowId: string | number): Promise<boolean> {
     try {
+      // workflow_id 在数据库中是 INTEGER 类型
       const result = await this.getDb()
         .prepare('INSERT OR IGNORE INTO workflow_favorites (user_id, workflow_id) VALUES (?, ?)')
-        .bind(userId, String(workflowId))
+        .bind(userId, Number(workflowId))
         .run();
       
       return result.success;
@@ -396,9 +398,10 @@ export class D1Storage implements IStorage {
    */
   async removeWorkflowFavorite(userId: number, workflowId: string | number): Promise<boolean> {
     try {
+      // workflow_id 在数据库中是 INTEGER 类型
       const result = await this.getDb()
         .prepare('DELETE FROM workflow_favorites WHERE user_id = ? AND workflow_id = ?')
-        .bind(userId, String(workflowId))
+        .bind(userId, Number(workflowId))
         .run();
       
       return result.success;
