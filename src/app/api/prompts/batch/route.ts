@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { prompts, userId } = body;
+    const { prompts, userId, isInitialData } = body;
 
     if (!prompts || !Array.isArray(prompts) || prompts.length === 0) {
       return NextResponse.json(
@@ -84,7 +84,8 @@ export async function POST(request: NextRequest) {
           complexity: prompt.complexity || 'beginner',
           type: 'text',
           tags: prompt.tags,
-          isCustom: true,
+          // 初始化数据不显示"新建"标签，用户导入的数据显示"新建"标签
+          isCustom: isInitialData ? false : true,
         }, userId);
         results.push(newPrompt);
       } catch (e) {
