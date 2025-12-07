@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { title, desc, prompt, category, complexity, type, icon, image, isCustom, userId,tags } = body;
+    const { title, desc, prompt, category, complexity, type, isCustom, userId,tags } = body;
 
     if (!title || !prompt || !category || !type) {
       return NextResponse.json(
