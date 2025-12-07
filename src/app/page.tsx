@@ -179,32 +179,32 @@ export default function HomePage() {
                 <p className="text-slate-900 max-w-2xl mx-auto dark:text-white">AI 不仅仅是工具，更是你的思维外骨骼。</p>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <ScrollReveal className="p-8 rounded-2xl bg-slate-800 dark:bg-[#111118] border border-slate-700 dark:border-[#1f1f2e]">
+                <ScrollReveal className="p-8 rounded-2xl bg-slate-800 dark:text-white border border-slate-700 dark:border-[#1f1f2e]">
                     <i className="fa-solid fa-bolt text-xl text-purple-400 mb-4 block"></i>
                     <h3 className="font-bold mb-2">极速构建</h3>
                     <p className="text-sm text-gray-400">将提示词编写时间缩短 70%。</p>
                 </ScrollReveal>
-                <ScrollReveal delay={100} className="p-8 rounded-2xl bg-slate-800 dark:bg-[#111118] border border-slate-700 dark:border-[#1f1f2e]">
+                <ScrollReveal delay={100} className="p-8 rounded-2xl bg-slate-800 dark:text-white border border-slate-700 dark:border-[#1f1f2e]">
                     <i className="fa-solid fa-brain text-xl text-blue-400 mb-4 block"></i>
                     <h3 className="font-bold mb-2">思维链增强</h3>
                     <p className="text-sm text-gray-400">引导 AI 进行深度推理。</p>
                 </ScrollReveal>
-                <ScrollReveal delay={200} className="p-8 rounded-2xl bg-slate-800 dark:bg-[#111118] border border-slate-700 dark:border-[#1f1f2e]">
+                <ScrollReveal delay={200} className="p-8 rounded-2xl bg-slate-800 dark:text-white border border-slate-700 dark:border-[#1f1f2e]">
                     <i className="fa-solid fa-palette text-xl text-pink-400 mb-4 block"></i>
                     <h3 className="font-bold mb-2">风格一致性</h3>
                     <p className="text-sm text-gray-400">确保系列作品的视觉统一。</p>
                 </ScrollReveal>
-                <ScrollReveal className="p-8 rounded-2xl bg-slate-800 dark:bg-[#111118] border border-slate-700 dark:border-[#1f1f2e]">
+                <ScrollReveal className="p-8 rounded-2xl bg-slate-800 dark:text-white border border-slate-700 dark:border-[#1f1f2e]">
                     <i className="fa-solid fa-code text-xl text-green-400 mb-4 block"></i>
                     <h3 className="font-bold mb-2">多模型兼容</h3>
                     <p className="text-sm text-gray-400">通用于 GPT-4, Claude 3, MJ。</p>
                 </ScrollReveal>
-                <ScrollReveal delay={100} className="p-8 rounded-2xl bg-slate-800 dark:bg-[#111118] border border-slate-700 dark:border-[#1f1f2e]">
+                <ScrollReveal delay={100} className="p-8 rounded-2xl bg-slate-800 dark:text-white border border-slate-700 dark:border-[#1f1f2e]">
                     <i className="fa-solid fa-graduation-cap text-xl text-yellow-400 mb-4 block"></i>
                     <h3 className="font-bold mb-2">零基础上手</h3>
                     <p className="text-sm text-gray-400">可视化的提示词构建向导。</p>
                 </ScrollReveal>
-                <ScrollReveal delay={200} className="p-8 rounded-2xl bg-slate-800 dark:bg-[#111118] border border-slate-700 dark:border-[#1f1f2e]">
+                <ScrollReveal delay={200} className="p-8 rounded-2xl bg-slate-800 dark:text-white border border-slate-700 dark:border-[#1f1f2e]">
                     <i className="fa-solid fa-chart-line text-xl text-red-400 mb-4 block"></i>
                     <h3 className="font-bold mb-2">效果可量化</h3>
                     <p className="text-sm text-gray-400">数据驱动优化。</p>
