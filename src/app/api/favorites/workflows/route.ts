@@ -4,11 +4,11 @@
  * POST: 添加收藏
  * DELETE: 移除收藏
  */
+export const runtime = 'edge';
 
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { isServerStorage } from '@/lib/storage.types';
-export const runtime = 'edge';
 // 获取用户收藏列表
 export async function GET(request: NextRequest) {
   if (!isServerStorage()) {
