@@ -79,7 +79,8 @@ export const PromptProvider = ({ children }: { children: React.ReactNode }) => {
       const response = await fetch('/api/prompts/batch', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompts: staticPrompts }),
+        // isInitialData: true 表示这是初始化数据，不显示"新建"标签
+        body: JSON.stringify({ prompts: staticPrompts, isInitialData: true }),
       });
       const data = await response.json();
       
