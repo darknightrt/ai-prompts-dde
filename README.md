@@ -19,6 +19,7 @@
 本项目**支持 Vercel、Cloudflare** 部署。
 存储支持矩阵
 |               | Docker | Vercel | Netlify | Cloudflare |
+| :-----------: | :----: | :----: | :-----: | :--------: |
 | localstorage  |        |    ✅  |         |     ✅     |
 | Cloudflare D1 |        |        |         |     ✅     |
 ✅：经测试支持
