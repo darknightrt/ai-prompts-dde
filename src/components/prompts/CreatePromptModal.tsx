@@ -197,7 +197,7 @@ export default function CreatePromptModal({ isOpen, onClose, editData }: CreateP
                     onChange={e => setNewTagText(e.target.value)}
                     placeholder="输入标签名称"
                     className="flex-1 rounded-lg border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm text-gray-900 dark:text-white px-3 py-2"
-                    maxLength={10}
+                    maxLength={15}
                   />
                   
                   {/* 颜色选择 */}
